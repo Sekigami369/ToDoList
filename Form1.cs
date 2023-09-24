@@ -14,7 +14,7 @@ namespace ToDoList
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -23,12 +23,29 @@ namespace ToDoList
         }
 
         private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
-        {
+        { 
+            if(e.KeyCode == Keys.Enter)
+            {
+                string todo = "ÅF" + textBox1.Text;
+                
+                if (!string.IsNullOrEmpty(todo))
+                {
+                    Panel panel = new Panel();
+                    panel.Dock = DockStyle.Fill;
 
-            string todo = textBox1.Text;
-            Panel panel = new Panel();
-            panel.Text = todo;
-            tableLayoutPanel1.Controls.Add(panel);
+                    Label label = new Label();
+                    label.Text = todo;
+
+                    panel.Controls.Add(label);
+
+                    tableLayoutPanel1.Controls.Add(panel);
+
+                    textBox1.Clear();
+
+                }
+                
+            }
+            
         }
     }
 }

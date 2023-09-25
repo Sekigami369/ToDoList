@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\skgmy\\source\\repos\\ToDoList\\ToDoList.csproj": {}
+    "C:\\Users\\sekigami\\source\\repos\\ToDoList\\ToDoList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\skgmy\\source\\repos\\ToDoList\\ToDoList.csproj": {
+    "C:\\Users\\sekigami\\source\\repos\\ToDoList\\ToDoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skgmy\\source\\repos\\ToDoList\\ToDoList.csproj",
+        "projectUniqueName": "C:\\Users\\sekigami\\source\\repos\\ToDoList\\ToDoList.csproj",
         "projectName": "ToDoList",
-        "projectPath": "C:\\Users\\skgmy\\source\\repos\\ToDoList\\ToDoList.csproj",
-        "packagesPath": "C:\\Users\\skgmy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skgmy\\source\\repos\\ToDoList\\obj\\",
+        "projectPath": "C:\\Users\\sekigami\\source\\repos\\ToDoList\\ToDoList.csproj",
+        "packagesPath": "C:\\Users\\sekigami\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sekigami\\source\\repos\\ToDoList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\skgmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sekigami\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

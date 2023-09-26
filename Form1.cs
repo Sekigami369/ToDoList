@@ -4,14 +4,13 @@ namespace ToDoList
     {
 
         Label label;
-        Panel panel;
-        int row;
-        int column;
+        //int row;
+        //int column;
         public Form1()
         {
             InitializeComponent();
-            this.BackColor = Color.SaddleBrown;
-            this.ForeColor = Color.SaddleBrown;
+            this.BackColor = Color.FromArgb(234, 244, 252);
+            this.ForeColor = Color.FromArgb(234, 244, 252);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,25 +32,32 @@ namespace ToDoList
         {
             if (e.KeyCode == Keys.Enter)
             {
-                string todo = "：　" + textBox1.Text;
+                string todo = "＊　" + textBox1.Text;
 
                 if (!string.IsNullOrEmpty(todo))
                 {
+                    int rowcount = 0;
                     float fontSize = 12;
+
                     label = new Label();
                     label.Text = todo;
                     label.Dock = DockStyle.Fill;
                     label.MouseDown += Label_Click;
-                    label.BackColor = Color.GhostWhite;
+                    label.BackColor = Color.FromArgb(146, 198, 202);
                     label.Font = new Font(label.Font.FontFamily, fontSize, label.Font.Style);
                     label.Font = new Font(label.Font, label.Font.Style | FontStyle.Bold);
                     label.TextAlign = ContentAlignment.MiddleCenter;
 
-                    tableLayoutPanel1.Controls.Add(label, 0, 0);
+                    tableLayoutPanel1.Controls.Add(label);
+
+                    //EnterKeyを押したときの「ピローン」を消す
+                    e.SuppressKeyPress = true;
 
                     textBox1.Clear();
+
                 }
             }
+
         }
 
         private void Label_Click(object sender, MouseEventArgs e)
@@ -64,14 +70,7 @@ namespace ToDoList
             {
                 if (clickedLabel != null)
                 {
-                    row = tableLayoutPanel1.GetRow(clickedLabel);
-                    column = tableLayoutPanel1.GetColumn(clickedLabel);
-
-                    Control control = tableLayoutPanel1.GetControlFromPosition(column, row);
-
-
-                    tableLayoutPanel1.Controls.Remove(control);
-                    control.Dispose();
+                    clickedLabel.Dispose();
                 }
             }
 
@@ -80,10 +79,7 @@ namespace ToDoList
             {
                 if (clickedLabel != null)
                 {
-                    row = tableLayoutPanel1.GetRow(clickedLabel);
-                    column = tableLayoutPanel1.GetColumn(clickedLabel);
 
-                    //Control control = tableLayoutPanel1.GetControlFromPosition(column, row);
                     if (!clickedLabel.Font.Style.HasFlag(FontStyle.Strikeout))
                     {
                         clickedLabel.Font = new Font(clickedLabel.Font, clickedLabel.Font.Style | FontStyle.Strikeout);

@@ -44,12 +44,13 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.AutoScroll = true;
             tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Location = new Point(12, 12);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Location = new Point(12, 1);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 18;
+            tableLayoutPanel1.RowCount = 24;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
@@ -68,10 +69,12 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(316, 534);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.Size = new Size(316, 545);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 

@@ -10,7 +10,7 @@ namespace ToDoList
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(234, 244, 252);
-            this.ForeColor = Color.FromArgb(234, 244, 252);
+            this.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
         private void Form1_Load(object sender, EventArgs e)
